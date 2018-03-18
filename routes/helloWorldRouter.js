@@ -47,7 +47,7 @@ router.get('/consultarByLinguagem/:linguagem', function (req, res) {
     
         try {
             var linguagem = req.params.linguagem;
-            helloController.getHelloById(linguagem, function (resp) {
+            helloController.getHelloByLinguagem (linguagem, function (resp) {
                 res.json(resp);
             });
         } catch (error) {
