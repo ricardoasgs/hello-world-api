@@ -45,7 +45,7 @@ exports.getHelloByLinguagem = function (linguagem, callback) {
         if (err) {
             callback({ 'erro': err });
         } else if (hello) {
-            callback(hello.descricao);
+            callback(hello);
         } else {
             callback({ 'erro': 'Nenhum hello encontrado' });
         }
