@@ -41,11 +41,11 @@ exports.getHelloById = function (id, callback) {
 }
 
 exports.getHelloByLinguagem = function (linguagem, callback) {
-    helloWorld.find({linguagem: linguagem}, function (err, hello) {
+    helloWorld.findOne({linguagem: linguagem}, function (err, hello) {
         if (err) {
             callback({ 'erro': err });
         } else if (hello) {
-            callback({hello: hello});
+            callback(hello);
         } else {
             callback({ 'erro': 'Nenhum hello encontrado' });
         }
